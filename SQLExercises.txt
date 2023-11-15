@@ -1,0 +1,41 @@
+CREATE DATABASE StudentRecord;
+
+CREATE TABLE Student (
+    StudentID int NOT NULL,
+    FirstName VARCHAR(50) NOT NULL,
+    MiddleName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    DateOfBirth VARCHAR(50) NOT NULL,
+    Address VARCHAR(100) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Phone VARCHAR(11) NOT NULL,
+    PRIMARY KEY(StudentID)
+);
+
+CREATE TABLE Course (
+    CourseID int NOT NULL,
+    CourseName VARCHAR(50) NOT NULL,
+    Credits VARCHAR(50) NOT NULL,
+    PRIMARY KEY(CourseID)
+);
+
+CREATE TABLE Instructor (
+    InstructorID int NOT NULL,
+    FirstName VARCHAR(50) NOT NULL,
+    MiddleName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Phone VARCHAR(11) NOT NULL,
+    PRIMARY KEY(InstructorID)
+);
+
+CREATE TABLE Enrollment (
+    EnrollmentID int NOT NULL,
+    StudentID int,
+    CourseID int,
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID),
+    EnrollmentDate VARCHAR(50) NOT NULL,
+    Grade VARCHAR(5) NOT NULL,
+    PRIMARY KEY(EnrollmentID)
+);
