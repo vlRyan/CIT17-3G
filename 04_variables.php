@@ -9,10 +9,11 @@
     <?php 
         $addNum = 2 + 2;
         echo "$addNum";
-        
+        $addNum = 2 + 2;
+        echo "$addNum";
         $four =
         2+
-        2; 
+        6; 
 
         print ($four);
 
