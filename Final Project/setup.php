@@ -9,14 +9,14 @@
       die("Connection failed: " . $conn->connect_error);
   }
 
-  $sql_create_db = "CREATE DATABASE IF NOT EXISTS salvatera";
+  $sql_create_db = "CREATE DATABASE IF NOT EXISTS Pulocan";
   if ($conn->query($sql_create_db) === TRUE) {
       echo "Database created successfully<br>";
   } else {
       echo "Error creating database: " . $conn->error;
   }
 
-  $conn->select_db("Pul-ocan");
+  $conn->select_db("Pulocan");
 
   $sql_create_users_table = "CREATE TABLE IF NOT EXISTS users (
       id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

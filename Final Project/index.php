@@ -1,3 +1,9 @@
+<?php
+    ob_start();
+        include 'setup.php';
+    ob_clean();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +15,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "Pul-ocan";
+    $dbname = "Pulocan";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
